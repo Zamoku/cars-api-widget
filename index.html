@@ -1,47 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
-    
+
     <title>Car API app</title>
 
     <script class="carTemplate" type="text/template-x">
-    {{#each cars}}
-    <li>{{make}}</li>
-    {{/each}}
 
-    {{#each color}}
-    <li>{{this}}</li>
-    {{/each}}
+        {{#each color}}
+        <li>{{this}}</li>
+        {{/each}}
+        
+        {{#each makes}}
+        <li>{{this}}</li>
+        {{/each}}
 
-    {{#each makes}}
-    <li>{{this}}</li>
-    {{/each}}
+        {{#each cars}}
+        <tr>
+        <td>{{make}}</td>
+        <td>{{model}}</td>
+        <td>{{color}}</td>
+        <td>{{reg_number}}</td>
+        </tr>
+        {{/each}}
     </script>
 
     <script src="index.js" defer></script>
 </head>
 
 <body>
-    <h2>Car API app</h2>
+    <h2>Car API App</h2>
 
-    <h3>Brand</h3>
-<div>
-    <ul class="car_brand"></ul>
-</div>
+    <h3>Cars</h3>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Color</th>
+                    <th>Reg number</th>
+                </tr>
+            </thead>
+            <tbody class="car_brand"></tbody>
+        </table>
+    </div>
     <h3>Color</h3>
-<div>
-    <ul class="car_color"></ul>
-</div>
+    <div>
+        <ul class="car_color"></ul>
+    </div>
 
-<h3>Make</h3>
-<div>
-    <ul class="car_make"></ul>
-</div>
-    
+    <h3>Make</h3>
+    <div>
+        <ul class="car_make"></ul>
+    </div>
+
+    <h3>Filter Widget</h3>
+
+    <div class="filterCar"></div>
+
 </body>
+
 </html>
