@@ -1,12 +1,14 @@
-const filter = document.querySelector('.carFilter');
 const carTemplateText = document.querySelector('.carTemplate');
+const colorTemplateText = document.querySelector('.colorTemplate');
+const makesTemplateText = document.querySelector('.makesTemplate');
 const carTemplate = Handlebars.compile(carTemplateText.innerText);
+// const colorTemplate = Handlebars.compile(colorTemplateText.innerText);
+// const makesTemplate = Handlebars.compile(makesTemplateText.innerText);
 
 const carElem = document.querySelector('.car_brand');
 const colorElem = document.querySelector('.car_color');
 const makeElem = document.querySelector('.car_make');
 
-const filterBtn = document.querySelector('.filterBtn');
 
 
 axios
@@ -39,12 +41,5 @@ axios
         })
     })
 
-    filterBtn.addEventListener('click', function (evt){
-    
-        const makeValue = makeElem.value;
-        const colorValue = colorElem.value;
-    
-    
-    })
-    
+   
 

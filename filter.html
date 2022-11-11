@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Cars API App</title>
+    
+    
+    <script class="selectMakeTemplate" type="text/template-x">
+    
+        <option value="">Select Brand</option>
+        {{#each makes}}
+        <option value="{{this}}">{{this}}</option>
+        {{/each}}
+   
+    
+    </script>
+
+    
+    <script class="selectColorTemplate" type="text-template-x">
+    <option value="">Select Color</option>
+	{{#each color}}
+	<option value = "{{this}}">{{this}}</option>
+	{{/each}}
+
+    </script>
+
+    <script class="filterCarTemplate" type="text-template-x">
+
+        {{#each filtered}}
+        <tr>
+        <td>{{make}}</td>
+        <td>{{model}}</td>
+        <td>{{color}}</td>
+        <td>{{reg_number}}</td>
+        </tr>
+        {{/each}}
+
+    </script>
+</head>
+<body>
+
+    <div>
+        <ul>
+            <li><a href="index.html">Cars Widget</a></li>
+            <li><a href="filter.html">Cars Filter Widget</a></li>
+        </ul>
+    </div>
+
+    <h3>Filter Widget</h3>
+
+    <select class="color_list"></select>
+    <select class="make_list"></select>
+    <br>
+    <br>
+    <table>
+        <thead>
+            <tr>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Color</th>
+                <th>Reg number</th>
+            </tr>
+        </thead>
+        <tbody class="filter_list"></tbody>
+    </table>
+    <!-- <div class=""></div> -->
+
+    <br>
+	<div>
+		<button class="filterBtn">filter</button>
+	</div>
+
+    <script src="filter.js"></script>
+</body>
+</html>
