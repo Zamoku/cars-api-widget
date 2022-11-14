@@ -13,12 +13,13 @@
     
     
     <script class="selectMakeTemplate" type="text/template-x">
-    
+        
+        <selectmenu class="my-select-menu">
         <option value="">Select Brand</option>
         {{#each makes}}
         <option value="{{this}}">{{this}}</option>
         {{/each}}
-   
+        </selectmenu>
     
     </script>
 
@@ -27,7 +28,10 @@
     <option value="">Select Color</option>
 	{{#each color}}
 	<option value = "{{this}}">{{this}}</option>
-	{{/each}}
+	{{/each}}   <br>
+	<div>
+		<button class="filterBtn">filter</button>
+	</div>
 
     </script>
 
@@ -55,8 +59,13 @@
 
     <h3>Filter Widget</h3>
 
+    
     <select class="color_list"></select>
     <select class="make_list"></select>
+    <br>
+    <br>
+	<button class="filterBtn">filter</button>
+	
     <br>
     <br>
     <table>
@@ -72,10 +81,7 @@
     </table>
     <!-- <div class=""></div> -->
 
-    <br>
-	<div>
-		<button class="filterBtn">filter</button>
-	</div>
+ 
 
     <script src="filter.js"></script>
 </body>
