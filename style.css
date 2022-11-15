@@ -35,9 +35,7 @@ tr{
     margin-left: 60px;
     padding-left: 20px;
     padding-bottom: 20px;
-
 }
-
 .filterBtn{
     border-radius: 30px;
     padding: 6px 16px;
@@ -70,6 +68,23 @@ ul {
   select{
       height: 35px;
       background-color: #ffE4C2;
+  }
+  .container{
+      margin-left: 315px;
+  }
+  .mini-container{
+    margin-left: 295px;
+    margin-right: 2px;
+  }
+  h2{
+    margin-left: 345px;
+  }
+  .make_list{
+      margin-right: 30px;
+      padding:5px;
+  }
+  .color_list{
+    padding:5px;
   }
 
 
